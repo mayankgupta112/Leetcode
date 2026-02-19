@@ -12,5 +12,7 @@ bool isPalindrome(int x){
    if(x==rev){
        return true;
    }
+   else{
    return false;
+}
 }
