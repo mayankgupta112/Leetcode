@@ -1,6 +1,3 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
 
 int searchInsert(int* nums, int numsSize, int target) {
     int low = 0;
@@ -10,7 +7,7 @@ int searchInsert(int* nums, int numsSize, int target) {
         int mid = (low + high) / 2;
         
         if (nums[mid] == target) {
-            return mid;        // Found
+            return mid;       
         }
         else if (nums[mid] < target) {
             low = mid + 1;
@@ -20,5 +17,5 @@ int searchInsert(int* nums, int numsSize, int target) {
         }
     }
     
-    return low;   // Insert position
+    return low;   
 }
