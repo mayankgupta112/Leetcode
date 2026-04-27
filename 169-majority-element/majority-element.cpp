@@ -4,6 +4,7 @@ public:
         int candidate = nums[0];
         int count = 1;
 
+        // Step 1: Find candidate
         for(int i = 1; i < nums.size(); i++) {
             if(nums[i] == candidate)
                 count++;
@@ -16,16 +17,6 @@ public:
             }
         }
 
-        // verification
-        count = 0;
-        for(int x : nums) {
-            if(x == candidate)
-                count++;
-        }
-
-        if(count > nums.size()/2)
-            return candidate;
-        else
-            return -1;
+        return candidate;  // LC 169 me verification ki need nahi
     }
 };
